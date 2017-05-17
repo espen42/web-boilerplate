@@ -59,30 +59,16 @@ const getProdConfig = (PATHS, doLog) => {
             plugins: [
                 new WebpackShellPlugin({
                     onBuildStart: [
-                        'echo rm -rf chaser_tmp',
-                        'rm -rf chaser_tmp',
-
-                        'echo git clone git@github.com:espen42/chaser.git chaser_tmp',
-                        'git clone git@github.com:espen42/chaser.git chaser_tmp',
                     ],
                     onBuildEnd: [
-                        'echo mv chaser_tmp/.git dist/.git',
-                        'mv chaser_tmp/.git dist/.git',
-
-                        'echo mv chaser_tmp/README.md dist',
-                        'mv chaser_tmp/README.md dist',
-
-                        'echo rm -rf chaser_tmp',
-                        'rm -rf chaser_tmp',
-
-                        'echo mv images dist',
+                        'echo FIXME - this shouldnt be necessary: mv images dist ',
                         'mv images dist',
 
-                        'echo mv fonts dist',
+                        'echo FIXME - this shouldnt be necessarymv fonts dist',
                         'mv fonts dist',
 
-                        'echo cp assets/images/icon15.png dist/images/icon15.png',
-                        'cp assets/images/icon15.png dist/images/icon15.png',
+                        'echo FIXME - this shouldnt be necessary cp assets/images/icon.png dist/images/icon.png',
+                        'cp assets/images/icon.png dist/images/icon.png',
 
                         'echo Done.',
                     ],
@@ -100,7 +86,7 @@ const getProdConfig = (PATHS, doLog) => {
                     environmentVariables(doLog)
                 )),
                 new OfflinePlugin({
-                    externals: ['index.html', 'images/icon15.png'],
+                    externals: ['index.html', 'images/icon.png'],
                 }),
             ],
         },
