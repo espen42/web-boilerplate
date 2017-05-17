@@ -10,6 +10,7 @@ const useCssLoader = {
     loader: 'css-loader',
     options: {
         modules: true,     // TRUE TO USE CSS-MODULES!
+        localIdentName: '[name]__[local]___[hash:base64:5]'
     },
 };
 

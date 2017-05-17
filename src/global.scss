@@ -1,6 +1,6 @@
 @import '../assets/fonts/font-awesome-4.6.3/font-awesome.css';
 
-body, html, #app {
+body, html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -14,7 +14,13 @@ body {
   box-sizing: border-box;
 }
 
-.flex-row {
+:global #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:global .flex-row {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -22,22 +28,22 @@ body {
   justify-content: space-between;
 }
 
-.flex1 {
+:global .flex1 {
   display: inline-block;
   flex: 1 1 auto;
 }
 
-.no-flex {
+:global .no-flex {
   display: inline-block;
   flex: 0 0 auto;
 }
 
-.ellipsis {
+:global .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.unselectable {
+:global .unselectable {
   user-select: none;
 }
