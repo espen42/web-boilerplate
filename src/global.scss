@@ -1,0 +1,46 @@
+@import '../assets/fonts/roboto-condensed/css/roboto-cond.css';
+@import '../assets/fonts/playfair-display/css/playfair.css';
+@import '../assets/fonts/font-awesome-4.6.3/font-awesome.css';
+
+body, html, #app, :global .main-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+* {
+  /*font-family: "Roboto Condensed", sans-serif;*/
+  /*box-sizing: border-box;*/
+}
+
+:global .flex-row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+:global .flex1 {
+  display: inline-block;
+  flex: 1 1 auto;
+}
+
+:global .no-flex {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+:global .ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:global .unselectable {
+  user-select: none;
+}
